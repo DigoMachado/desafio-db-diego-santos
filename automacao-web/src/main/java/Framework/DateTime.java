@@ -1,2 +1,23 @@
-package Framework;public class DateTime {
+package Framework;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
+public class DateTime {
+    public static String getDateTimeFormatReport()
+    {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss");
+        Date now = new Date();
+        return dateFormat.format(now);
+    }
+
+    public static String getDateTimeFormatScreenshot()
+    {
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MMM-yyyy_hh'h'mm'm's's'");
+        LocalDateTime localDateTime = LocalDateTime.now();
+        return dateTimeFormatter.format(localDateTime);
+    }
+
 }

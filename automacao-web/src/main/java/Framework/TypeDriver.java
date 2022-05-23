@@ -1,2 +1,8 @@
-package Framework;public enum TypeDriver {
+package Framework;
+
+public enum TypeDriver {
+    CHROME,
+    FIREFOX,
+    IE,
+    HEADLESS;
 }
